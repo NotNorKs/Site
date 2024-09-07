@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+  background-color: rgb(32, 32, 32);
+  color: white;
+  font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+header {
+  background-image: url(pics/BG.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 285px;
+  padding: 20px;
+  text-align: center; /* Fixed alignment */
+  position: relative; /* Allows absolute position of the navbar */
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  flex-wrap: wrap; /* Ensures buttons wrap if they overflow */
+  position: relative;
+  justify-content: flex-start;
+  padding: 10px;
+  top: -30px; /* Move closer to the top */
+  left: -25px; /* Move closer to the left */
+  width: 100%; /* Ensure navbar takes full width */
+  box-sizing: border-box; /* Includes padding in total width */
+}
+
+a.button {
+  display: inline-block; /* Allows width and height adjustments */
+  padding: 5px 10px; /* Adds space inside the button */
+  background-color: #ffffff; /* Button background color */
+  color: black; /* Text color */
+  text-decoration: none; /* Removes underline from links */
+  border: 2px solid black; /* Button border color */
+  border-radius: 20px; /* Rounds the corners */
+  text-align: center; /* Centers text inside the button */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+  white-space: nowrap; /* Prevents text from wrapping */
+  font-size: 0.75rem; /* Smaller font size */
+  margin-right: 10px; /* Add space between buttons */
+}
+
+a.button:hover {
+  background-color: white; /* Changes background color on hover */
+  color: #aa7340; /* Changes text color on hover */
+}
+
+/* Responsive Navbar for Small Screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: flex-start; /* Align buttons to the left */
+  }
+
+  a.button {
+    width: auto; /* Allow buttons to take full width on small screens */
+    padding: 5px 10px; /* Adjust padding for larger click area */
+    margin: 5px 2px; /* Add margin between buttons when stacked */
+  }
+}
+.top-title {
+  -webkit-text-stroke: 1.5px black;
+  margin: -20px;
+  color: white;
+}
+
+/* Navigation Styles */
+ul.button-list {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start; /* Aligns buttons to the left */
+  flex-wrap: wrap; /* Ensures buttons wrap on small screens */
+}
+
+li {
+  display: inline-block;
+}
+
+/* Footer Styles */
+footer {
+  background-color: black;
+  padding: 10px 20px;
+}
+
+/* Ensuring buttons remain responsive across screen sizes */
+@media (max-width: 480px) {
+  a.button {
+    font-size: 0.65rem; /* Reduce font size further on smaller screens */
+    padding: 8px 10px; /* Adjust padding for mobile */
+  }
+}
